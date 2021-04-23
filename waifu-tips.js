@@ -65,7 +65,7 @@ function loadWidget(config) {
 				window.ASTEROIDSPLAYERS.push(new Asteroids());
 			} else {
 				const script = document.createElement("script");
-				script.src = "https://cdn.jsdelivr.net/gh/xfx98/asteroids/asteroids.js";
+				script.src = "https://cdn.jsdelivr.net/gh/xfx98/live2d-widget/asteroids.js";
 				document.head.appendChild(script);
 			}
 		});
@@ -104,6 +104,7 @@ function loadWidget(config) {
 			localStorage.setItem("waifu-display", Date.now());
 			showMessage("Hello 我回来啦啦啦。", 2000, 11);
 			document.getElementById("waifu").style.bottom = "0px";
+			localStorage.removeItem("waifu-display");
 			setTimeout(() => {
 				document.getElementById("waifu").style.display = "block";
 				document.getElementById("waifu-toggle").classList.add("waifu-toggle-active");
@@ -240,7 +241,7 @@ function loadWidget(config) {
 			showMessage("我的新衣服好看嘛？", 4000, 10);
 		} else {
 			// 可选 "rand"(随机), "switch"(顺序)
-			fetch(`${apiPath}rand_textures/?id=${modelId}-${modelTexturesId}`)
+			fetch(`${apiPath}switch_textures/?id=${modelId}-${modelTexturesId}`)
 				.then(response => response.json())
 				.then(result => {
 					if (result.textures.id === 1 && (modelTexturesId === 1 || modelTexturesId === 0)) showMessage("我还没有其他衣服呢！", 4000, 10);
