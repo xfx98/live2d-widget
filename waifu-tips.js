@@ -99,6 +99,16 @@ function loadWidget(config) {
 		window.addEventListener("visibilitychange", () => {
 			if (!document.hidden) showMessage("哇，你终于回来了～", 6000, 9);
 		});
+
+		document.querySelector("#waifu-toggle .waifu-toggle-active").addEventListener("click", () => {
+			localStorage.setItem("waifu-display", Date.now());
+			showMessage("Hello 我回来啦啦啦。", 2000, 11);
+			document.getElementById("waifu").style.bottom = "0px";
+			setTimeout(() => {
+				document.getElementById("waifu").style.display = "block";
+				document.getElementById("waifu-toggle").classList.add("waifu-toggle-active");
+			}, 3000);
+		});
 	})();
 
 	(function welcomeMessage() {
