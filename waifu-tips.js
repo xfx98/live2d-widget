@@ -101,13 +101,13 @@ function loadWidget(config) {
 		});
 
 		document.querySelector("#waifu-toggle .waifu-toggle-active").addEventListener("click", () => {
-			localStorage.setItem("waifu-display", Date.now());
+			// localStorage.setItem("waifu-display", Date.now());
 			showMessage("Hello 我回来啦啦啦。", 2000, 11);
 			document.getElementById("waifu").style.bottom = "0px";
 			localStorage.removeItem("waifu-display");
 			setTimeout(() => {
 				document.getElementById("waifu").style.display = "block";
-				document.getElementById("waifu-toggle").classList.add("waifu-toggle-active");
+				document.getElementById("waifu-toggle").classList.remove("waifu-toggle-active");
 			}, 3000);
 		});
 	})();
