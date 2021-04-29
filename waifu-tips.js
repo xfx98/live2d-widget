@@ -100,16 +100,16 @@ function loadWidget(config) {
 			if (!document.hidden) showMessage("哇，你终于回来了～", 6000, 9);
 		});
 
-		document.querySelector("#waifu-toggle .waifu-toggle-active").addEventListener("click", () => {
-			// localStorage.setItem("waifu-display", Date.now());
-			showMessage("Hello 我回来啦啦啦。", 2000, 11);
-			document.getElementById("waifu").style.bottom = "0px";
-			localStorage.removeItem("waifu-display");
-			setTimeout(() => {
-				document.getElementById("waifu").style.display = "block";
-				document.getElementById("waifu-toggle").classList.remove("waifu-toggle-active");
-			}, 3000);
-		});
+		// document.querySelector("#waifu-toggle .waifu-toggle-active").addEventListener("click", () => {
+		// 	// localStorage.setItem("waifu-display", Date.now());
+		// 	showMessage("Hello 我回来啦啦啦。", 2000, 11);
+		// 	document.getElementById("waifu").style.bottom = "0px";
+		// 	localStorage.removeItem("waifu-display");
+		// 	setTimeout(() => {
+		// 		document.getElementById("waifu").style.display = "block";
+		// 		document.getElementById("waifu-toggle").classList.remove("waifu-toggle-active");
+		// 	}, 3000);
+		// });
 	})();
 
 	(function welcomeMessage() {
