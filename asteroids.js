@@ -357,7 +357,7 @@ function Asteroids() {
         height: h + "px",
         position: "fixed",
         top: "0px",
-        left: "0px",
+        // left: "0px",
         bottom: "0px",
         right: "0px",
         zIndex: "10000"
